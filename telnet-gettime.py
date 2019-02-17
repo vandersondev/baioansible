@@ -7,9 +7,8 @@ def main():
     HOST = 'india.colorado.edu'
     PORT = 13
     tn = telnetlib.Telnet(HOST, PORT)
-    r = tn.read_all().decode('utf-8')
-    time.sleep(1)
-    print(r)
+    tn.set_debuglevel(1)
+    print(tn.read_all().decode('utf-8'))
 
 
 if __name__ == '__main__':
