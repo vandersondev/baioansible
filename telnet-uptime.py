@@ -1,6 +1,6 @@
 #! /usr/bin/env python3
 
-import telnetlib, time
+import telnetlib
 
 
 def main():
