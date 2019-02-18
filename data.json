@@ -1,0 +1,8 @@
+[
+    {% for item in context %}
+    {
+        'name': '{{item.name}}',
+        'versao': '{{item.version}}'
+    }{{ ',' if not loop.last }}
+    {% endfor %}
+]
