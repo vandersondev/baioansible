@@ -1,0 +1,5 @@
+{% for item in context %}
+- item_{{loop.index}}:
+    name: '{{item.name}}'
+    versao: '{{item.version}}'
+{% endfor %}

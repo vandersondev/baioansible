@@ -1,5 +1,5 @@
 #! /usr/bin/env python3
-
+from yaml import load
 from jinja2 import Environment, FileSystemLoader
 
 def main():
@@ -16,8 +16,9 @@ def main():
 
     loader = FileSystemLoader('./')
     templateEnv = Environment(loader=loader)
-    template = templateEnv.get_template('data.json')
-    print(template.render(context=data))
+    template = templateEnv.get_template('data.yaml')
+    yamlData = template.render(context=data)
+    print(load(yamlData))
 
 
 if __name__ == '__main__':
